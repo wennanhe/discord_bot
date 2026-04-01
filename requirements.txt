@@ -1,0 +1,11 @@
+# Discord Bot 核心库
+discord.py==2.4.0
+
+# 读取 .env 文件
+python-dotenv==1.0.1
+
+# 异步 HTTP 请求（调用 LLM API 用）
+aiohttp==3.11.0
+
+# 可选：如果你想用 OpenAI 官方库调用 LLM（更方便）
+openai==1.65.0

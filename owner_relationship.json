@@ -1,0 +1,11 @@
+{
+  "owner_id": null,
+  "owner_name": null,
+  "known_facts": [],
+  "last_interaction": null,
+  "conversation_count": 0,
+  "owner_round_count": 0,
+  "last_owner_message_at": null,
+  "last_proactive_sent_at": null,
+  "proactive_ignore_streak": 0
+}

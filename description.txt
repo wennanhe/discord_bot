@@ -1,0 +1,260 @@
+
+# The Scenario
+
+Your bot lives on **Discord**.
+
+It has one job:
+
+> Build a relationship with its owner from scratch.
+>
+
+When the bot starts, it knows **nothing** about:
+
+- itself
+- its owner
+- the relationship between them
+
+Through conversation, it should gradually:
+
+- learn about its owner
+- develop its own personality
+- remember important things
+- eventually reach out proactively
+
+The experience should feel like **meeting a new person**, not filling out a survey.
+
+---
+
+# What You Should Build
+
+## 1. Conversational Onboarding
+
+When the bot first meets its owner, it should learn through **natural conversation**.
+
+Not:
+
+- forms
+- surveys
+- rigid questionnaires
+
+During the conversation, the bot should gradually:
+- pick a **name**
+- develop a **personality**
+- generate an **avatar**
+based on the interaction.
+
+The bot should be curious, but it should not interrogate the owner. Good conversations have pacing and reciprocity.
+
+---
+
+## 2. Persistent Identity
+
+Everything the bot learns should be written to **files**.
+
+When the bot restarts, it should remember:
+
+- who it is
+- who its owner is
+- important things the owner has shared
+
+These files act as the bot’s **brain**.
+
+You do **not** need a database.
+
+Simple local files are perfectly fine.
+
+---
+
+## 3. Proactive Behavior
+
+The bot should occasionally **reach out on its own**.
+
+For example:
+
+Early stage
+
+- curious
+- reaches out more often
+- still learning about the owner
+
+Later stage
+
+- more contextual
+- less frequent
+- less needy
+
+If the owner ignores the bot, it should:
+
+- back off
+- try again later
+- avoid spamming
+
+A simple timer alone is not enough — the bot should have a **reasonable motivation** for reaching out and keep their owner engaged.
+
+---
+
+## 4. Memory That Feels Natural
+
+The bot should reference past things the owner mentioned.
+
+Good:
+
+> “I know you like climbing!”
+>
+
+Bad:
+
+> “According to message #7 your hobby is climbing.”
+>
+
+Memory should feel **natural and human**, not mechanical.
+
+We are **not** looking for full transcript storage.
+
+Show some judgment about what is worth remembering.
+
+---
+
+# Implementation Constraint (Important)
+
+To keep the project small while still revealing real agent design:
+
+Your bot should maintain **at least two persistent files**:
+
+- one describing the **bot's identity**
+- one describing the **owner / relationship**
+
+These files should be **updated during conversation** and **read back into the bot’s context** when generating responses.
+
+This ensures the bot's behavior evolves over time rather than relying on a single static prompt.
+
+The structure of these files is completely up to you.
+
+---
+
+# What You Deliver
+
+## 1. GitHub Repository
+
+Your implementation.
+
+Public or private. (share access to *pikarecruit*)
+
+---
+
+## 2. Working Discord Bot
+
+Create:
+
+- a Discord bot
+- a test server
+
+Add the bot to the server and send us the **invite link**. Set `cm6550` as the bot owner for us to interact and test the behavior.
+
+---
+
+## 3. Bot State Files
+
+After interacting with the bot, send us the files it wrote.
+
+We want to see:
+
+- what it learned about itself
+- what it learned about the owner
+- how it stores identity over time
+
+---
+
+## 4. Short Loom (≈5 minutes)
+
+Please walk us through:
+
+- your architecture
+- how memory works
+- how proactive outreach works
+- what you would improve with more time
+
+---
+
+# Evaluation Criteria
+
+## Product Taste
+
+Does the bot feel like **a real personality**, or like a questionnaire?
+
+---
+
+## Conversational Judgment
+
+Does it know when to ask questions, when to respond, and when to leave space?
+
+---
+
+## Proactive Logic
+
+Is there real reasoning behind **when** and **why** the bot reaches out?
+
+---
+
+## Memory Design
+
+Does it remember the right things and reference them naturally?
+
+---
+
+## Failure Handling
+
+What happens if:
+
+- the LLM fails
+- the bot is ignored
+- a tool fails
+
+Does the system degrade gracefully?
+
+---
+
+## Code Quality
+
+We value code that is:
+
+- simple
+- readable
+- practical
+
+Over elaborate abstractions.
+
+---
+
+## The Key Question
+
+> Would you actually want this bot?
+>
+
+---
+
+# What We Don't Care About
+
+- Which LLM you use
+- Fancy UI
+- Test coverage
+- Framework choice
+- Over-engineering
+
+---
+
+# Using AI Tools
+
+Use whatever tools you want.
+
+We do too.
+
+The Loom is where we see whether you **understand what you built**.
+
+---
+
+# Getting Started
+
+1. Create a Discord bot
+2. Set up a test server
+3. Start building
